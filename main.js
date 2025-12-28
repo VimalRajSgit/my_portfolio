@@ -54,7 +54,7 @@ scene.add(spotlight2);
 const avatar = new THREE.Mesh(
   new THREE.CircleGeometry(6, 64),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load("myface.png"),
+    map: new THREE.TextureLoader().load("/images/myface.png"),
     transparent: true,
   }),
 );
@@ -147,7 +147,7 @@ scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ size: 0.7 })));
 const rocket = new THREE.Mesh(
   new THREE.PlaneGeometry(5, 8),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load("rocket.png"),
+    map: new THREE.TextureLoader().load("/images/rocket.png"),
     transparent: true,
   }),
 );
@@ -160,7 +160,7 @@ scene.add(rocket);
 const loader = new GLTFLoader();
 let ufo;
 
-loader.load("ufo.glb", (gltf) => {
+loader.load("/models/ufo.glb", (gltf) => {
   ufo = gltf.scene;
 
   ufo.scale.set(3, 3, 3);
